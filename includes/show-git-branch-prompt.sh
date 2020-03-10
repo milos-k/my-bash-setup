@@ -1,7 +1,7 @@
 #!/bin/bash
 
-git_branch() { #get GIT branch
-  my_git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+my_git_branch() { #get GIT branch
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
 OPS1="${PS1}"
